@@ -1,6 +1,7 @@
 .ipynb_checkpoints
 __pycache__
 
-auth_data.py
 redeems.txt
+auth_data.py
 users_info.py
+raid_messages.py
