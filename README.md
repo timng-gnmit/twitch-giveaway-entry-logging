@@ -50,7 +50,7 @@ Note that the display name is important for `users2channelid()` because the API 
 
 ## raid_messages.py
 Contains various raid messages in a dictionary `raid_messages`, organized as follows:
-'''
+```
 raid_messages = {
 	"streamer1" : ["sub_repeated_raid_message_1 "*3,
 		"follower_repeated_raid_message_1 "*3]
@@ -59,7 +59,7 @@ raid_messages = {
 		"follower_raid_message_2 "]
 	...
 }
-'''
+```
 The string multiplication after the space would make a raid message such as `I have no raid message!` appear as
 `I have no raid message! I have no raid message! I have no raid message!` (hence the space). This is for organizational purposes only. Note that in the example, `streamer2` has a follower raid message with no repeating. This happens sometimes. Finally, `send_raid_messages()` can handle if someone only has one raid message and it is in a string, not a list.
 
