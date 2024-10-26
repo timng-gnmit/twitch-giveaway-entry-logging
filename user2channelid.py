@@ -22,7 +22,7 @@ def user2channelid(users_list, auth_token, client_id):
 
         channel_ids = {}
         for response in data:
-            channel_ids[response["display_name"]] = response["id"]
+            channel_ids[response["login"]] = response["id"]
 
         return channel_ids
     else:

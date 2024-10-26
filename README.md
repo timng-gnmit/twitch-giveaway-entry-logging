@@ -43,10 +43,10 @@ bot_access_token = response["access_token"]
 ## users_info.py
 contains two variables:
 ```
-streamer = streamer_display_name
-user = user_display_name
+streamer = streamer_name
+user = user_name
 ```
-Note that the display name is important for `users2channelid()` because the API response to the GET request uses the display name of the user. At least that's what it does for the current implementation. It is probably possible to make it work with the lowercase version of the name.
+Note that the capitalization is not important for `users2channelid()`. The API response to the GET request uses a lowercase version of the user's name, so `users2channelid()` automatically lowercases whatever is in this file.
 
 ## raid_messages.py
 Contains various raid messages in a dictionary `raid_messages`, organized as follows:

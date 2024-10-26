@@ -35,6 +35,9 @@ def send_raid_messages(verbose=False):
     if streamer.lower() in raid_messages.keys():
         messages = raid_messages[streamer.lower()]
         
+        if verbose:
+            print(messages)
+        
         post_url = 'https://api.twitch.tv/helix/chat/messages'
         post_headers = {"Authorization": "Bearer " + user_access_token,
                         "Client-Id" : bot_client_id,
@@ -59,6 +62,7 @@ def send_raid_messages(verbose=False):
                 post_response = requests.post(post_url, headers=post_headers, data=json.dumps(data))
                 if verbose:
                     print(json.loads(post_response.text))
+                
         elif type(messages) == str:
             data = {
                     "broadcaster_id" : str(channel_id),
