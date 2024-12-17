@@ -1,6 +1,5 @@
-**Still not figured out:**
-- How do I get the user to grant more access to the app? My current idea is to get the user to click on a link, have the link send data to the logging app, and get the auth token from there. I am not sure if this is possible in Jupyter Notebooks.
-- How do I deal with session_reconnect messages? This would also get fixed by completely understanding auth tokens, which I do not completely get yet.
+**Latest Update:**
+- Programmatically gets auth token using Jupyter Notebook "command line" (`!twitch token [params]`)
 
 # Twitch Giveaway Entry Logging Notebook
 The `giveaway_entry_logging.ipynb` notebook was created as a way to automatically log giveaway entries for a Twitch streamer. Initially, I wanted to use pubsub with the `channel:read:redemptions` scope, but that requires the user to also be the streamer. My original intent was to just be able to fire this up as a moderator or even as a viewer so that the streamer doesn't have to worry about logging the entries by themself.
