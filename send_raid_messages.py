@@ -2,16 +2,6 @@
 import requests
 import json
 
-# load bot authorization data
-from auth_data import bot_access_token, bot_client_id, user_access_token
-'''
-includes:
-bot_access_token <- bot oAuth code
-bot_client_id <- client id
-user_access_token <- user access token, currently from Twitch CLI - https://dev.twitch.tv/docs/cli/
-                     currently uses scopes channel:read:redemptions user:read:chat user:write:chat openid
-'''
-
 # for knowing which streamer to use
 from users_info import streamer, user
 
@@ -29,7 +19,7 @@ usage:
         verbose <- optional bool; if True, will print post request response
 '''
 
-def send_raid_messages(verbose=False):
+def send_raid_messages(bot_access_token, bot_client_id, user_access_token, verbose=False):
     # note that in my implementation of raid_messages.py, all streamer names are not their display names
     # they were all set to lowercase for consistency
     if streamer.lower() in raid_messages.keys():
